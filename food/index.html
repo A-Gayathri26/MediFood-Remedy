@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediFood Remedy - Ayurvedic Food Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><i class="fas fa-leaf"></i> MediFood Remedy</h2>
+            </div>
+            <div class="nav-links">
+                <select id="language-selector" class="language-selector">
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Search -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find Natural Food Remedies</h1>
+            <p>Discover Ayurvedic solutions for your health concerns through medicinal foods</p>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search for health problems like headache, stomach pain, cold...">
+                <button id="search-btn"><i class="fas fa-search"></i> Search Remedies</button>
+            </div>
+            <div class="quick-tags">
+                <span class="tag" data-problem="headache">Headache</span>
+                <span class="tag" data-problem="stomach pain">Stomach Pain</span>
+                <span class="tag" data-problem="cold">Cold/Flu</span>
+                <span class="tag" data-problem="anxiety">Anxiety</span>
+                <span class="tag" data-problem="digestion">Digestion</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Filters Section -->
+        <div class="filters-section">
+            <div class="filter-group">
+                <label><i class="fas fa-filter"></i> Food Type:</label>
+                <select id="food-type-filter">
+                    <option value="all">All Types</option>
+                    <option value="veg">Vegetarian</option>
+                    <option value="non-veg">Non-Vegetarian</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label><i class="fas fa-sort"></i> Sort by:</label>
+                <select id="sort-filter">
+                    <option value="name">Name (A-Z)</option>
+                    <option value="time">Preparation Time</option>
+                    <option value="problem">Health Problem</option>
+                </select>
+            </div>
+            <button id="reset-filters" class="reset-btn">
+                <i class="fas fa-redo"></i> Reset Filters
+            </button>
+        </div>
+
+        <!-- Results Grid -->
+        <div id="results-count" class="results-count"></div>
+        <div id="food-grid" class="food-grid">
+            <!-- Food cards will be populated by JavaScript -->
+        </div>
+
+        <!-- No Results Message -->
+        <div id="no-results" class="no-results" style="display: none;">
+            <i class="fas fa-search fa-3x"></i>
+            <h3>No remedies found</h3>
+            <p>Try searching for different health problems like "headache", "cold", or "digestion"</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-leaf"></i> MediFood Remedy</h3>
+                <p>Ayurvedic Food Solutions for Better Health</p>
+            </div>
+            <div class="footer-section">
+                <p>&copy; 2024 MediFood Remedy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Food Detail Modal -->
+    <div id="food-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body">
+                <!-- Modal content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
